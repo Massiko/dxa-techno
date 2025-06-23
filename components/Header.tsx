@@ -16,24 +16,6 @@ import {
   ChevronDown
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { LucideIcon } from "lucide-react"
-
-
-type SubmenuItem = {
-  name: string
-  href: string
-  icon?: LucideIcon
-}
-
-type NavItem = {
-  name: string
-  href: string
-  icon: LucideIcon
-  badge?: string
-  submenu?: SubmenuItem[]
-}
-
-
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -47,40 +29,39 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navigation: NavItem[] = [
-  {
-    name: 'Services',
-    href: '/services',
-    icon: Building,
-    submenu: [
-      { name: 'Expertise Réseaux', href: '/services/reseaux', icon: Network },
-      { name: 'Architecture Logicielle', href: '/services/architecture', icon: Code },
-      { name: 'Transformation Digitale', href: '/services/transformation', icon: Zap },
-    ]
-  },
-  {
-    name: 'Produits',
-    href: '/produits',
-    icon: Zap,
-    badge: 'Marque déposée'
-  },
-  {
-    name: 'Blog',
-    href: '/blog',
-    icon: FileText,
-    submenu: [
-      { name: 'Cas Clients', href: '/blog/cas-clients' },
-      { name: 'Analyses Tech', href: '/blog/analyses' },
-      { name: 'Enjeux Technologiques', href: '/blog/enjeux' },
-    ]
-  },
-  {
-    name: 'Contact',
-    href: '/contact',
-    icon: Phone
-  }
-]
-
+  const navigation = [
+    {
+      name: 'Services',
+      href: '/services',
+      icon: Building,
+      submenu: [
+        { name: 'Expertise Réseaux', href: '/services/reseaux', icon: Network },
+        { name: 'Architecture Logicielle', href: '/services/architecture', icon: Code },
+        { name: 'Transformation Digitale', href: '/services/transformation', icon: Zap },
+      ]
+    },
+    {
+      name: 'Produits',
+      href: '/produits',
+      icon: Zap,
+      badge: 'Marque déposée'
+    },
+    {
+      name: 'Blog',
+      href: '/blog',
+      icon: FileText,
+      submenu: [
+        { name: 'Cas Clients', href: '/blog/cas-clients' },
+        { name: 'Analyses Tech', href: '/blog/analyses' },
+        { name: 'Enjeux Technologiques', href: '/blog/enjeux' },
+      ]
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: Phone
+    }
+  ]
 
   return (
     <header className={cn(

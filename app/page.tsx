@@ -4,9 +4,6 @@ import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Label } from '@/components/ui/label'
-import { Textarea } from '@/components/ui/textarea'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { 
   Network, 
   Code, 
@@ -15,7 +12,6 @@ import {
   CheckCircle, 
   Globe, 
   Shield, 
-  Users,
   Star,
   TrendingUp,
   Award,
@@ -55,7 +51,7 @@ const SERVICES = [
 
 const STATS = [
   { value: "150+", label: "Projets réalisés", icon: Target },
-  { value: "50+", label: "Clients satisfaits", icon: Users },
+  { value: "50+", label: "Clients satisfaits", icon: Building },
   { value: "98%", label: "Taux de satisfaction", icon: Star },
   { value: "24/7", label: "Support technique", icon: Shield }
 ]
@@ -76,13 +72,13 @@ const RECENT_PROJECTS = [
     category: "Architecture Logicielle",
     description: "Migration complète vers une architecture microservices cloud-native",
     technologies: ["Kubernetes", "Spring Boot", "PostgreSQL", "Redis"],
-    impact: "40% d'amélioration des performances"
+    impact: "40% d&apos;amélioration des performances"
   },
   {
     title: "Infrastructure Réseau Hybride",
     client: "Groupe Industriel",
     category: "Expertise Réseaux",
-    description: "Déploiement d'une infrastructure réseau hybride multi-sites",
+    description: "Déploiement d&apos;une infrastructure réseau hybride multi-sites",
     technologies: ["SD-WAN", "Cisco", "Azure", "Fortinet"],
     impact: "60% de réduction des coûts réseau"
   },
@@ -92,7 +88,7 @@ const RECENT_PROJECTS = [
     category: "Transformation Digitale",
     description: "Digitalisation complète des processus métier et formation des équipes",
     technologies: ["Salesforce", "Power BI", "Azure AD", "Teams"],
-    impact: "25% d'augmentation de productivité"
+    impact: "25% d&apos;augmentation de productivité"
   }
 ]
 
@@ -116,7 +112,7 @@ export default function Home() {
         <div className="relative container mx-auto text-center">
           <div className="max-w-5xl mx-auto">
             <Badge className="mb-6 bg-blue-100 text-blue-800 border-blue-200">
-              🚀 Pionnier d'une technologie propre et humanisée
+              🚀 Pionnier d&apos;une technologie propre et humanisée
             </Badge>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -130,8 +126,8 @@ export default function Home() {
             </p>
             
             <p className="text-xl text-slate-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Nous construisons des ponts d'opportunité technologique avec une ambition : 
-              devenir pionnier d'une technologie propre, humanisée et porteuse de souveraineté.
+              Nous construisons des ponts d&apos;opportunité technologique avec une ambition : 
+              devenir pionnier d&apos;une technologie propre, humanisée et porteuse de souveraineté.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -151,7 +147,7 @@ export default function Home() {
 
             {/* Technologies showcase */}
             <div className="grid grid-cols-2 md:grid-cols-6 gap-4 max-w-4xl mx-auto">
-              {TECHNOLOGIES.map((tech, index) => (
+              {TECHNOLOGIES.map((tech) => (
                 <div
                   key={tech.name}
                   className="bg-white/60 backdrop-blur-sm rounded-lg p-4 hover:bg-white/80 transition-all duration-300 hover:scale-105"
@@ -191,7 +187,7 @@ export default function Home() {
               Nos Expertises
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Trois domaines d'excellence pour transformer votre reve en réalité
+              Trois domaines d&apos;excellence pour transformer votre reve en réalité
             </p>
           </div>
 
@@ -281,7 +277,7 @@ export default function Home() {
                       <span className="text-sm font-medium">{project.impact}</span>
                     </div>
                     <Button size="sm" variant="ghost">
-                      Lire l'étude de cas
+                      Lire l&apos;étude de cas
                       <ArrowRight className="w-3 h-3 ml-1" />
                     </Button>
                   </div>
@@ -301,7 +297,7 @@ export default function Home() {
                 Notre Mission
               </h2>
               <p className="text-xl text-slate-600 mb-6 leading-relaxed">
-                Construire des ponts d'opportunité technologique pour connecter 
+                Construire des ponts d&apos;opportunité technologique pour connecter 
                 vos ambitions à la réalité du terrain.
               </p>
               <div className="space-y-4">
@@ -311,16 +307,16 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-800">Technologie Propre</h3>
-                    <p className="text-slate-600 text-sm">Solutions durables et respectueuses de l'environnement</p>
+                    <p className="text-slate-600 text-sm">Solutions durables et respectueuses de l&apos;environnement</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Users className="w-4 h-4 text-purple-600" />
+                    <Building className="w-4 h-4 text-purple-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-800">Approche Humanisée</h3>
-                    <p className="text-slate-600 text-sm">L'humain au centre de chaque transformation</p>
+                    <p className="text-slate-600 text-sm">L&apos;humain au centre de chaque transformation</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -342,8 +338,8 @@ export default function Home() {
                   <h3 className="text-2xl font-bold text-slate-800">Notre Vision</h3>
                 </div>
                 <blockquote className="text-lg text-slate-600 italic text-center leading-relaxed">
-                  "Devenir le pionnier d'une technologie qui respecte l'humain, 
-                  préserve l'environnement et renforce la souveraineté numérique."
+                  &quot;Devenir le pionnier d&apos;une technologie qui respecte l&apos;humain, 
+                  préserve l&apos;environnement et renforce la souveraineté numérique.&quot;
                 </blockquote>
                 <div className="mt-6 text-center">
                   <p className="text-sm text-slate-500">— Équipe DXA Technologies</p>
@@ -382,7 +378,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-slate-600">
-                  <li>• Détection d'intrusion en temps réel</li>
+                  <li>• Détection d&apos;intrusion en temps réel</li>
                   <li>• Analyse comportementale avancée</li>
                   <li>• Réponse automatique aux menaces</li>
                 </ul>
@@ -421,7 +417,7 @@ export default function Home() {
                 </div>
                 <CardTitle className="text-xl">DXA Transform</CardTitle>
                 <CardDescription>
-                  Suite d'outils pour la transformation digitale agile
+                  Suite d&apos;outils pour la transformation digitale agile
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -478,7 +474,7 @@ export default function Home() {
                 />
               </div>
               <p className="text-slate-400 mb-4">
-                Construire des ponts d'opportunité technologique pour un avenir numérique souverain
+                Construire des ponts d&apos;opportunité technologique pour un avenir numérique souverain
               </p>
               <div className="flex space-x-4">
                 <div className="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center cursor-pointer hover:bg-blue-600 transition-colors">
