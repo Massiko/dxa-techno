@@ -40,20 +40,20 @@ const CONTACT_INFO = [
   {
     icon: Phone,
     title: "Téléphone",
-    value: "+33 1 23 45 67 89",
+    value: "+242 06 972 13 57/+242 06 505 87 81",
     description: "Lun-Ven 9h-18h"
   },
   {
     icon: Mail,
     title: "Email",
-    value: "contact@dxa-technologies.fr",
+    value: "contact@dxa-techno.com",
     description: "Réponse sous 24h"
   },
   {
     icon: MapPin,
     title: "Adresse",
-    value: "123 Avenue de l'Innovation",
-    description: "75001 Paris, France"
+    value: "46 Rue OTARI",
+    description: "Brazzaville, Congo"
   },
   {
     icon: Clock,
@@ -65,23 +65,23 @@ const CONTACT_INFO = [
 
 const TEAM_MEMBERS = [
   {
-    name: "Sarah Chen",
-    role: "Directrice Technique",
-    expertise: "Architecture Cloud & IA",
+    name: "Hilaire OKEMBA",
+    role: "Associé, suivi de Mission",
+    expertise: "Architecture Logicielle ",
     image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg",
     linkedin: "#"
   },
   {
-    name: "Marc Dubois",
-    role: "Expert Réseaux",
-    expertise: "Infrastructure & Sécurité",
+    name: "Davy IBOVI",
+    role: "Associé, Gerant",
+    expertise: "Commerce, Architecture Reseaux et Communication",
     image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
     linkedin: "#"
   },
   {
-    name: "Julie Rousseau",
-    role: "Consultante Transformation",
-    expertise: "Change Management & DevOps",
+    name: "Benoit IBOVI",
+    role: "Associé, Gérant",
+    expertise: "Change Management, DevOps, Produits",
     image: "https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg",
     linkedin: "#"
   }

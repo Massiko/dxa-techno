@@ -24,8 +24,8 @@ export const navigation: NavItem[] = [
       icon: Building,
       submenu: [
         { name: 'Expertise Réseaux', href: '/services/reseaux', icon: Network },
-        { name: 'Architecture Logicielle', href: '/services/architecture', icon: Code },
-        { name: 'Transformation Digitale', href: '/services/transformation', icon: Zap },
+        { name: 'Architecture Logicielle', href: '/services/archi-logicielle', icon: Code },
+        { name: 'Transformation Digitale', href: '/services/transformation-digitale', icon: Zap },
       ]
     },
     {
