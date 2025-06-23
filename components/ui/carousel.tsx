@@ -14,11 +14,13 @@ type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
 type CarouselOptions = UseCarouselParameters[0];
 type CarouselPlugin = UseCarouselParameters[1];
 
-type CarouselProps = {
+export interface CarouselProps {
+//type CarouselProps = {
   opts?: CarouselOptions;
   plugins?: CarouselPlugin;
   orientation?: 'horizontal' | 'vertical';
   setApi?: (api: CarouselApi) => void;
+  size?: 'sm' | 'md' | 'lg'|null ;
 };
 
 type CarouselContextProps = {
@@ -204,7 +206,7 @@ const CarouselPrevious = React.forwardRef<
     <Button
       ref={ref}
       variant={variant}
-      size={size}
+      size={size as 'sm' | 'md' | 'lg'}
       className={cn(
         'absolute  h-8 w-8 rounded-full',
         orientation === 'horizontal'
@@ -233,7 +235,8 @@ const CarouselNext = React.forwardRef<
     <Button
       ref={ref}
       variant={variant}
-      size={size}
+      //size={size}
+      size={ size as 'sm' | 'md' | 'lg'}
       className={cn(
         'absolute h-8 w-8 rounded-full',
         orientation === 'horizontal'

@@ -16,20 +16,8 @@ import {
   ChevronDown
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
-
-export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const navigation = [
+import type { NavItem } from '@/types/navigation'
+export const navigation: NavItem[] = [
     {
       name: 'Services',
       href: '/services',
@@ -62,6 +50,20 @@ export default function Header() {
       icon: Phone
     }
   ]
+
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  
 
   return (
     <header className={cn(
