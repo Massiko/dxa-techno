@@ -374,6 +374,35 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
+            {/* Équipe */}
+            <Card className="border-0 shadow-lg bg-white">
+              <CardHeader>
+                <CardTitle>Notre Équipe</CardTitle>
+                <CardDescription>
+                  Experts à votre service
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {TEAM_MEMBERS.map((member, index) => (
+                  <div key={index} className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-slate-800">{member.name}</h4>
+                      <p className="text-sm text-slate-600">{member.role}</p>
+                      <p className="text-xs text-slate-500">{member.expertise}</p>
+                    </div>
+                    <Button size="sm" variant="ghost">
+                      <Linkedin className="w-4 h-4" />
+                    </Button>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+
             {/* Réseaux sociaux */}
             <Card className="border-0 shadow-lg bg-white">
               <CardHeader>

@@ -349,6 +349,92 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Produits DXA */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-purple-100 text-purple-800 border-purple-200">
+              🏷️ Marque Déposée DXA
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+              Nos Produits Technologiques
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Solutions propriétaires développées par nos équipes pour répondre aux défis technologiques actuels
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-blue-50 to-blue-100">
+              <CardHeader>
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <Network className="w-6 h-6 text-white" />
+                </div>
+                <CardTitle className="text-xl">DXA NetGuard</CardTitle>
+                <CardDescription>
+                  Solution de sécurité réseau intelligente avec IA intégrée
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-slate-600">
+                  <li>• Détection d&apos;intrusion en temps réel</li>
+                  <li>• Analyse comportementale avancée</li>
+                  <li>• Réponse automatique aux menaces</li>
+                </ul>
+                <Button className="w-full mt-4" variant="outline">
+                  En savoir plus
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-purple-50 to-purple-100">
+              <CardHeader>
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                  <Code className="w-6 h-6 text-white" />
+                </div>
+                <CardTitle className="text-xl">DXA CloudBuilder</CardTitle>
+                <CardDescription>
+                  Plateforme de développement cloud-native low-code
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-slate-600">
+                  <li>• Déploiement automatisé</li>
+                  <li>• Scaling intelligent</li>
+                  <li>• Monitoring intégré</li>
+                </ul>
+                <Button className="w-full mt-4" variant="outline">
+                  En savoir plus
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-green-50 to-green-100">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <CardTitle className="text-xl">DXA Transform</CardTitle>
+                <CardDescription>
+                  Suite d&apos;outils pour la transformation digitale agile
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-slate-600">
+                  <li>• Audit automatisé des SI</li>
+                  <li>• Roadmap personnalisée</li>
+                  <li>• Suivi de performance</li>
+                </ul>
+                <Button className="w-full mt-4" variant="outline">
+                  En savoir plus
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto text-center">
@@ -375,7 +461,77 @@ export default function Home() {
         </div>
       </section>
 
- 
+      {/* Footer */}
+      <footer className="bg-slate-900 text-white py-16 px-4">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <div className="flex items-center mb-4">
+                <img 
+                  src="/LOGO_DXA_V1.0-removebg-preview.png" 
+                  alt="DXA Technologies" 
+                  className="h-32 w-auto"
+                />
+              </div>
+              <p className="text-slate-400 mb-4">
+                Construire des ponts d&apos;opportunité technologique pour un avenir numérique souverain
+              </p>
+              <div className="flex space-x-4">
+                <div className="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center cursor-pointer hover:bg-blue-600 transition-colors">
+                  <span className="text-xs">Li</span>
+                </div>
+                <div className="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center cursor-pointer hover:bg-blue-600 transition-colors">
+                  <span className="text-xs">Tw</span>
+                </div>
+                <div className="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center cursor-pointer hover:bg-blue-600 transition-colors">
+                  <span className="text-xs">Gh</span>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold mb-4">Services</h4>
+              <ul className="space-y-2 text-slate-400">
+                <li><Link href="/services/reseaux" className="hover:text-white transition-colors">Expertise Réseaux</Link></li>
+                <li><Link href="/services/architecture" className="hover:text-white transition-colors">Architecture Logicielle</Link></li>
+                <li><Link href="/services/transformation" className="hover:text-white transition-colors">Transformation Digitale</Link></li>
+                <li><Link href="/services/conseil" className="hover:text-white transition-colors">Conseil SI</Link></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold mb-4">Produits</h4>
+              <ul className="space-y-2 text-slate-400">
+                <li><Link href="/produits/netguard" className="hover:text-white transition-colors">DXA NetGuard</Link></li>
+                <li><Link href="/produits/cloudbuilder" className="hover:text-white transition-colors">DXA CloudBuilder</Link></li>
+                <li><Link href="/produits/transform" className="hover:text-white transition-colors">DXA Transform</Link></li>
+                <li><Link href="/produits" className="hover:text-white transition-colors">Tous nos produits</Link></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold mb-4">Ressources</h4>
+              <ul className="space-y-2 text-slate-400">
+                <li><Link href="/blog" className="hover:text-white transition-colors">Blog & Analyses</Link></li>
+                <li><Link href="/cas-clients" className="hover:text-white transition-colors">Cas Clients</Link></li>
+                <li><Link href="/documentation" className="hover:text-white transition-colors">Documentation</Link></li>
+                <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-slate-400 text-sm">
+              © 2024 DXA Technologies. Tous droits réservés.
+            </p>
+            <div className="flex space-x-6 text-sm text-slate-400 mt-4 md:mt-0">
+              <Link href="/mentions-legales" className="hover:text-white transition-colors">Mentions légales</Link>
+              <Link href="/confidentialite" className="hover:text-white transition-colors">Confidentialité</Link>
+              <Link href="/cookies" className="hover:text-white transition-colors">Cookies</Link>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
