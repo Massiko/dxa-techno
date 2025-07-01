@@ -28,12 +28,7 @@ export const navigation: NavItem[] = [
         { name: 'Transformation Digitale', href: '/services/transformation-digitale', icon: Zap },
       ]
     },
-    {
-      name: 'Produits',
-      href: '/produits',
-      icon: Zap,
-      badge: 'Marque déposée'
-    },
+
     {
       name: 'Blog',
       href: '/blog',
